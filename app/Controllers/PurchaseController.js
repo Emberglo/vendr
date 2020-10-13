@@ -30,8 +30,8 @@ export default class PurchaseController {
         _draw()
     }
 
-    buy(item) {
-        console.log('buying:', item);
-        purchaseService.buy(item)
+    buy(itemName) {
+        console.log('buying:');
+        purchaseService.buy(itemName)
     }
 }

@@ -6,8 +6,13 @@ class PurchaseService {
     //     console.log('hello from purchase service');
     // }
 
-    buy(item) {
+    buy(itemName) {
         // ProxyState.items = [...ProxyState.items]
+        let items = ProxyState.items
+        let itemId = items.findIndex((item) => item.name == itemName)
+        console.log(itemId);
+        items[itemId].qty--
+        ProxyState.items = items
     }
 }
 

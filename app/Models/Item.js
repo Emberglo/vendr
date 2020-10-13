@@ -11,7 +11,7 @@ export default class Item {
                 <p id="itemName">${this.name}</p>
                 <p class="itemCost">$${this.cost}</p>
                 <p class="itemQty">${this.qty} Available</p>
-                <button onclick="app.purchaseController.buy(this.name)">Buy</button>
+                <button onclick="app.purchaseController.buy('${this.name}')">Buy ${this.name}</button>
             </div>
             
         `
