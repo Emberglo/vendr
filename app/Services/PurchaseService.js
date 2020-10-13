@@ -10,8 +10,12 @@ class PurchaseService {
         // ProxyState.items = [...ProxyState.items]
         let items = ProxyState.items
         let itemId = items.findIndex((item) => item.name == itemName)
-        console.log(itemId);
-        items[itemId].qty--
+        if (items[itemId].qty > 0) {
+            items[itemId].qty--
+        } else {
+            console.log("Out of stock");
+        }
+        
         ProxyState.items = items
     }
 }
