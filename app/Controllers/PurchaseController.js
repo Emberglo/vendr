@@ -31,7 +31,7 @@ export default class PurchaseController {
     }
 
     buy(itemName) {
-        console.log('buying:');
+        console.log('buying:', itemName);
         purchaseService.buy(itemName)
     }
 }
